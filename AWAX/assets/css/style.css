@@ -1,8 +1,68 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+header {
+    background-color: #000;
+    height: 100px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    max-width: 1140px;
+    margin: auto;
+    color: #FFF;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logoImg {
+    width: 80px;
+    height: 80px;
+    background-color: #B28756;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}  
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li {
+    list-style: none;    
+}
+
+.menu li a {
+    text-transform: uppercase;    
+    font-weight: 600;
+    text-decoration: none;
+    color: #FFF;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    /* Para definir a altura da tag "a", precisa definir como display:flex. Pois ela é por padrão inline, que não tem como definir altura. */
+    /* Definindo dessa forma, o border-bottom do hover irá ficar corretamente no final da div menu. */
+    display: flex;
+    align-items: center;
+    height: 100px;
+    border-bottom: 5px solid transparent;
+}
+
+.menu li a:hover {
+    border-bottom: 5px solid #B28756;
 }
