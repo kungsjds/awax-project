@@ -1,3 +1,7 @@
+:root {
+    --color-p: #B28756;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +34,7 @@ header {
 .logoImg {
     width: 80px;
     height: 80px;
-    background-color: #B28756;
+    background-color: var(--color-p);
 }
 
 .menu {
@@ -64,5 +68,106 @@ header {
 }
 
 .menu li a:hover {
-    border-bottom: 5px solid #B28756;
+    border-bottom: 5px solid var(--color-p);
+}
+
+.banner {
+    background-image:  url("../images/bg.jpg");
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 839px;
+}
+
+.opacity {  
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+} 
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;      
+    text-transform: uppercase;    
+}
+
+.title h1 {
+    font-weight: 700;
+    color: #FFF;
+    font-size: 5.5em;
+    text-shadow: 0px 0px 3px #000;
+}
+
+.title strong {
+    font-weight: 700;
+    color: var(--color-p);
+}
+
+.title p {
+    font-weight: 700;
+    font-size: 2em;
+    color: #FFF;
+    flex-wrap: wrap;
+}
+
+.button {
+    background-color: var(--color-p);
+    color: #FFF;
+    font-weight: 600;
+    text-align: center;
+    width: 200px;
+    padding: 15px 20px;
+    border-radius: 100px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 3px #000;
+    background-color: #000;
+    color: var(--color-p);
+    text-shadow: 0px 0px 3px var(--color-p);
+}
+
+.navImage {
+    display: flex;
+    margin-bottom: 30px;    
+}
+
+.nav {
+    border: 3px solid var(--color-p);
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.nav:hover {
+    background-color: var(--color-p);
+}
+
+.navSelected {
+    background-color: var(--color-p);
+}
+
+.about {
+    height: 500px;    
+    box-shadow: 5px 0px 5px #000;
 }
