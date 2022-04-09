@@ -85,7 +85,7 @@ header {
     flex-direction: column;
     justify-content: space-between; 
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 100%;
 } 
@@ -95,7 +95,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 200px;
+    max-width: 1140px;
+    margin: auto;
 }
 
 .title {
@@ -171,3 +172,128 @@ header {
     height: 500px;    
     box-shadow: 5px 0px 5px #000;
 }
+
+.titleGeral {
+    margin-bottom: 40px;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.titleGeral p {
+    font-size: 0.7em;
+    font-weight: 600;
+    padding-top: 10px;
+    color: grey;
+}
+
+.contentAbout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.partOne {
+    padding-right: 50px;
+}
+
+.informativeVideo {
+    width: 400px;
+    height: 250px;
+    background-color: #171717;
+    box-shadow: 2px 3px 5px #000;
+}
+
+.paddingSections {
+    padding-top: 40px;
+    padding-bottom: 20px
+}
+
+.blackColorBg {
+    background-color: #000;
+    color: #FFF;
+}
+
+.servicesSec {
+    padding-bottom: 30px;
+}
+
+.services {
+    display: flex;
+}
+
+.servicesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.serviceDescription p {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.serviceDescription label {
+    color: #b7b7b7;
+}
+
+.serviceBefore {
+    display: flex;
+}
+
+.serviceBefore::before {    
+    content: '';
+    border-left: 1px solid #b7b7b7;
+}
+
+.afterStyle::after {
+    content: '';
+    border-left: 1px solid #b7b7b7;
+}
+
+.projectSec {
+    background-color: #FFF;
+}
+
+.menuProject ul {
+    display: flex;
+    list-style: none;
+    border: 1px solid #b7b7b7;
+    border-radius: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #e7e7e7;
+}
+
+.menuProject li {
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-transform: uppercase;
+    border-bottom: 5px solid transparent;
+    /* background-color: #e7e7e7; */
+       
+}
+
+.menuProject li:hover {
+    border-bottom: 5px solid var(--color-p);
+}
+
+/* .menuProject ul:first-child {
+    border-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-left: 40px;
+}
+
+.menuProject ul:last-child {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-right: 40px;
+} */
