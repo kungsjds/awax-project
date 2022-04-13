@@ -292,32 +292,39 @@ header {
     height: 40px;
     margin-top: 2px;
     margin-bottom: 2px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     background-color: var(--grey-color);
 }
 
 .menuProject div:first-child {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    padding-left: 40px;
+    padding-left: 30px;
 }
 
 .menuProject div:last-child {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding-right: 40px;
+    padding-right: 30px;
 }
 
 .menuProject label {
     display: flex;
     align-items: center;
     height: 44px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-bottom: 5px solid transparent;
     cursor: pointer;
 }
 
 .menuProject label:hover {
+    border-bottom: 5px solid var(--color-p);
+}
+
+
+#selectedMenu {
     border-bottom: 5px solid var(--color-p);
 }
 
@@ -336,7 +343,101 @@ header {
     cursor: pointer;
 }
 
-.info {
+.photos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo1 {
+    background-image: url("../../media/foto1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo2 {
+    background-image: url("../../media/foto2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo3 {
+    background-image: url("../../media/foto3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo4 {
+    background-image: url("../../media/foto4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo5 {
+    background-image: url("../../media/foto5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo6 {
+    background-image: url("../../media/foto6.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo7 {
+    background-image: url("../../media/foto7.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo8 {
+    background-image: url("../../media/foto8.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo9 {
+    background-image: url("../../media/foto9.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo10 {
+    background-image: url("../../media/foto1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo11 {
+    background-image: url("../../media/foto1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photo12 {
+    background-image: url("../../media/foto1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+.showInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -364,16 +465,51 @@ header {
     cursor: pointer;
 }
 
-.photo2 {
-    background-image: url("../../media/foto2.jpg");
+.teamSec {
+    background-image: url("../../media/foto6.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.photos img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.titleGeral2 {
+    margin-bottom: 40px;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    text-align: center;    
+    color: #FFF;
 }
 
+.titleGeral2 p {
+    font-size: 0.7em;
+    font-weight: 600;
+    padding-top: 10px;
+    color: var(--grey-color);
+}
+
+.teamCards {
+    display: flex;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 1%;
+    box-shadow: 0px 0px 5px #000;
+    padding: 30px;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.socialLogo {
+    display: flex;
+    justify-content: center;
+    background-color: var(--grey-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;    
+}

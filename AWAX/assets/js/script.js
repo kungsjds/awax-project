@@ -1,9 +1,9 @@
-function infoToggle() {
-    let div = document.querySelector(".info");
+function infoToggle(e) {
+    let div = document.querySelector(e);
 
-    if (div.style.display == 'flex') {
-        div.style.display = "none";
+    if (div.classList.contains('showInfo')) {
+        div.classList.remove('showInfo');
     } else {
-        div.style.display = "flex";
+        div.classList.add('showInfo');
     }
 }
