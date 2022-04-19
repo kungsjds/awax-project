@@ -849,3 +849,54 @@ header {
 .pinterestLogo {
     background-color: #b71d29;
 }
+
+.contactSec input[type="text"], input[type="email"] {
+    border: 0;
+    border-bottom: 2px solid var(--grey-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    outline: none;
+}
+
+.contactSec form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#identity {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#identity input[type="email"] {
+    margin-left: 15px;    
+}
+
+#identity input {
+    max-width: 250px;
+    width: 100%;
+}
+
+#subject {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+#message {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#subject input,
+#message input {
+    max-width: 515px;
+    width: 100%;
+}
