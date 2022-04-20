@@ -190,6 +190,7 @@ header {
     margin-right: 5px;
     margin-left: 5px;
     cursor: pointer;
+    transition: 250ms;
 }
 
 .nav:hover {
@@ -346,6 +347,7 @@ header {
     padding-right: 15px;
     border-bottom: 5px solid transparent;
     cursor: pointer;
+    transition: 250ms;
 }
 
 .menuProject label:hover {
@@ -370,6 +372,12 @@ header {
     margin-top: 30px;   
     box-shadow: 0px 0px 5px #000;
     cursor: pointer;
+    transition: 250ms;
+}
+
+.photos:hover {
+    transform: scale(1.05,1.05);
+    box-shadow: 2px 2px 5px #000;
 }
 
 .photos img {
@@ -565,6 +573,7 @@ header {
     height: 25px;
     border-radius: 12.5px;  
     padding: 5px;  
+    transition: 250ms;
 }
 
 .socialLogo:hover {
@@ -828,6 +837,11 @@ header {
     width: 30px;
     height: 30px;
     border-radius: 15px;
+    transition: 250ms;
+}
+
+.containerLink a:hover {
+    filter: brightness(120%);
 }
 
 .twitterLogo {
@@ -850,6 +864,10 @@ header {
     background-color: #b71d29;
 }
 
+.contactSec {
+    padding-bottom: 70px;
+}
+
 .contactSec input[type="text"], input[type="email"] {
     border: 0;
     border-bottom: 2px solid var(--grey-color);
@@ -870,7 +888,7 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 #identity input[type="email"] {
@@ -885,7 +903,7 @@ header {
 #subject {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     width: 100%;
 }
 
@@ -899,4 +917,51 @@ header {
 #message input {
     max-width: 515px;
     width: 100%;
+}
+
+.localitySec {
+    background-image: url(../../media/mapa.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+
+.alignStart {
+    align-items: flex-start;
+}
+
+.addressSection {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 50px;
+    box-shadow: 0px 0px 5px var(--grey-color);
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    color: var(--dark-grey-color);
+}
+
+.logoAddress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: var(--grey-color);
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #000;
 }
