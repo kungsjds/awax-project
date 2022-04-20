@@ -965,3 +965,69 @@ header {
 footer {
     background-color: #000;
 }
+
+.directionFooter{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footerArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    max-width: 350px;
+    max-height: 200px;
+    width: 100vh;
+    height: 100vh;  
+    margin-bottom: 20px;
+}
+
+.footerLinks {
+    display: flex;
+}
+
+.footerImageLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: var(--dark-grey-color);
+    margin-right: 10px;
+    transition: 250ms;
+}
+
+.footerImageLink:hover {
+    background-color: var(--color-p);
+}
+
+.copyright {
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.footerDesc {
+    max-width: 375px;
+    color: #FFF;
+}
+
+.footerSubscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-grey-color);
+    padding-top: 45px;
+    padding-bottom: 45px;
+    padding-left: 70px;
+    padding-right: 70px;    
+}
+
+.footerSubscribe input {
+    text-align: center;
+    background-color: transparent;
+    color: var(--grey-color);
+    width: 220px;
+}
