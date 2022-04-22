@@ -24,6 +24,7 @@ header {
 
 .header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 100px;
     max-width: 1140px;
@@ -33,6 +34,7 @@ header {
 
 .logo {
     width: 100px;
+    margin-left: 10px;
 }
 
 .logoImg {
@@ -74,6 +76,55 @@ header {
 
 .menu li a:hover {
     border-bottom: 5px solid var(--color-p);
+}
+
+.menuMobileImages {
+    display: flex;
+}
+
+.contactImageHeader,
+#menuOpener {
+    display: none;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+#menuMobile {
+    display: none;   
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    width: 250px;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0.8);    
+    overflow-x: auto;
+    overflow-y: hidden;  
+    transition: all 0.5s ease; 
+}
+
+#menuMobile a {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;    
+}
+
+#menuMobile a:hover {
+    color: var(--color-p);
+}
+
+#menuMobile li {
+    list-style: none;    
+}
+
+.paddingMenuMobile {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
 }
 
 .aboutSec {
@@ -1030,4 +1081,40 @@ footer {
     background-color: transparent;
     color: var(--grey-color);
     width: 220px;
+}
+
+#scrollTopButton {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-p);
+    color: white;
+    font-size: 1.3em;
+    font-weight: 700;
+    z-index: 9999;
+    bottom: 20px;
+    right: 20px;
+}
+
+@media (max-width: 970px) {
+
+    .menu {
+        display: none;
+    }
+
+    .contactImageHeader,
+    #menuOpener {
+        display: flex;        
+    }   
+
+    #menuMobile {
+        display: flex;
+        
+    }
+
 }
