@@ -34,10 +34,8 @@ function menuToggle() {
     let element = document.getElementById('menuMobile');
 
     if (element.style.height == "839px") {
-        element.classList.remove('paddingMenuMobile');
         element.style.height = menu.hidden;
     } else {
-        element.classList.add('paddingMenuMobile');
         element.style.height = menu.show;
     };
 };
