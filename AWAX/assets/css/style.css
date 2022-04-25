@@ -874,12 +874,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;    
-    margin-right: 20px;
+    margin-right: 20px;    
 }
 
 .shareLogo label {
     padding-left: 10px;
     text-transform: uppercase;
+}
+
+.flexRow {
+    display: flex;
 }
 
 .containerLink {
@@ -1032,7 +1036,7 @@ footer {
 
 .directionFooter{
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
 }
 
@@ -1074,6 +1078,7 @@ footer {
 
 .footerDesc {
     max-width: 375px;
+    padding-right: 15px;
     color: #FFF;
 }
 
@@ -1126,8 +1131,12 @@ footer {
     }   
 
     #menuMobile {
-        display: flex;
-        
+        display: flex;   
+    }
+
+    .directionFooter {
+        flex-direction: column;
+        align-items: center;
     }
 
 }
@@ -1156,6 +1165,25 @@ footer {
         text-align: center;
     }
 
+    .shareContainer {
+        flex-direction: column;
+    }
+
+    .containerLink {
+        flex-direction: column;
+        margin-left: 10px;    
+        margin-right: 10px;
+    }
+
+    .footerLinks {
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .shareLogo {
+        margin-bottom: 20px;
+    }    
+
 }
 
 @media (max-width: 570px) {
@@ -1169,3 +1197,5 @@ footer {
     }
 
 }
+
+
