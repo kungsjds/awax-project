@@ -348,12 +348,18 @@ header {
 
 .menuProject {
     display: flex;  
-    justify-content: space-around;
-    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
     border: 1px solid var(--grey-color);  
     border-radius: 20px;
     text-transform: uppercase;
     box-shadow: 0px 0px 1px var(--grey-color);
+}
+
+.menuPartOne,
+.menuPartTwo {
+    display: flex;
+    border-radius: 20px;  
 }
 
 .menuProject div {
@@ -382,13 +388,13 @@ header {
     background-color: var(--grey-color);
 }
 
-.menuProject div:first-child {
+.menuPartOne div:first-child {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     padding-left: 30px;
 }
 
-.menuProject div:last-child {
+.menuPartTwo div:last-child {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-right: 30px;
@@ -692,6 +698,8 @@ header {
 .containerCompany {
     display: flex;
     justify-content: space-between;
+    overflow-y: auto;
+    overflow-x: hidden;
     width: 100%;
 }
 
@@ -1040,7 +1048,9 @@ footer {
     align-items: flex-start;
 }
 
-.footerArea {
+.footerArea1,
+.footerArea2,
+.footerArea3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;  
@@ -1053,6 +1063,7 @@ footer {
 
 .footerLinks {
     display: flex;
+    width: 100%;
 }
 
 .footerImageLink {
@@ -1074,6 +1085,12 @@ footer {
 .copyright {
     color: #FFF;
     text-transform: uppercase;
+}
+
+.copyrightMobile {
+    display: none;
+    color: #FFF;
+    text-transform: uppercase; 
 }
 
 .footerDesc {
@@ -1139,6 +1156,36 @@ footer {
         align-items: center;
     }
 
+    .footerLinks {
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .footerArea1 {
+        height: auto;
+        margin-top: 20px;
+        order: 3;        
+    }
+
+    .footerArea2 {
+        order: 3;
+    }
+
+    .copyright {
+        display: none;
+    }
+
+    .copyrightMobile {
+        display: flex;
+        order: 5;
+    }
+
+    .footerArea1,
+    .footerArea2,
+    .footerArea3 {
+        align-items: center; 
+    }
+
 }
 
 @media (max-width: 730px) {
@@ -1149,6 +1196,20 @@ footer {
     
     .title p {
         font-size: 1em;
+    }
+
+    .featureInfo {
+        margin-left: 0px;
+    }
+
+    .features {
+        max-width: 250px;    
+    }
+
+    .premiumFeature {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 }
@@ -1173,16 +1234,37 @@ footer {
         flex-direction: column;
         margin-left: 10px;    
         margin-right: 10px;
-    }
-
-    .footerLinks {
-        justify-content: center;
-        align-items: center;        
-    }
+    }    
 
     .shareLogo {
         margin-bottom: 20px;
     }    
+
+    #company1,
+    #company6 {
+        display: none;
+    }
+
+    .menuProject {
+        flex-direction: column;        
+    }
+
+    .menuProject div {
+        justify-content: flex-start;
+    }
+
+    .optionMenu {
+        border-radius: 20px;  
+    }
+
+    .menuPartOne div:first-child,
+    .menuPartTwo div:first-child {
+        padding-left: 10px;
+    }
+
+    .menuPartTwo div:last-child {
+        padding-right: 10px;
+    }
 
 }
 
@@ -1191,10 +1273,52 @@ footer {
     .title h1 {
         font-size: 3.5em;
     }
-    
-    .title p {
-        font-size: 1em;
+
+    .services {
+        flex-direction: column;
     }
+
+    .serviceBefore::before,
+    .afterStyle::after {
+        border-left: 0px solid #000;
+    }
+
+    .servicesContainer {
+        margin-bottom: 50px;
+        max-width: 230px;
+    }
+
+    #identity {
+        flex-direction: column;
+    }
+    
+    #identity input[type="email"] {
+        margin-left: 0;    
+        margin-top: 30px;
+    }
+    
+    #identity input {
+        max-width: 530px;
+        width: 100%;
+    }
+
+    #subject {
+        margin-bottom: 30px;
+    }
+
+    .contactSec form {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
+
+@media (max-width: 460px) {
+
+    .title h1 {
+        font-size: 3.1em;
+    }
+
 
 }
 
