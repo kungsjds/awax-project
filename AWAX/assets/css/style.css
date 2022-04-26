@@ -74,8 +74,10 @@ header {
     border-bottom: 5px solid transparent;
 }
 
-.menu li a:hover {
+.menu li a:hover,
+.menu .active a {
     border-bottom: 5px solid var(--color-p);
+    color: #CCC;
 }
 
 .menuMobileImages {
