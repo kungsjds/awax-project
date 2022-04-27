@@ -41,6 +41,7 @@ header {
     width: 80px;
     height: 80px;
     background-color: var(--color-p);
+    border-radius: 40px;
 }
 
 .menu {
@@ -125,28 +126,57 @@ header {
     list-style: none;    
 }
 
-.aboutSec {
-    background-color: var(--light-grey-color);
-}
-
 .banner {
     background-image:  url("../images/bg.jpg");
-    background-color: #ccc;
+    background-color: #333;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 839px;
+    overflow: hidden;
+    height: calc(100vh - 100px);
+    /* 100vh = o tamanho total da tela do usuário em altura - os 100px da área do menu */
 }
 
-.opacity {  
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-between; 
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
+.banner .sliders {
+    width: 1000vw;
+    height: 100%;    
+}
+
+.banner .slide {
+    /* vw = Tamanho total da tela do usuário em largura */
+    width: 100vw;
     height: 100%;
-} 
+    background-color: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+}
+
+.banner .slidearea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #FFF;
+}
+
+.banner .slidearea h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.banner h1 span {
+    color: var(--color-p);
+}
+
+.banner h2 {
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.aboutSec {
+    background-color: var(--light-grey-color);
+}
 
 .container {
     display: flex;
@@ -191,9 +221,9 @@ header {
     color: #FFF;
     font-weight: 600;
     text-align: center;
-    width: 200px;
-    padding: 15px 20px;
-    border-radius: 100px;
+    max-width: 200px;
+    padding: 15px 30px;
+    border-radius: 20px;
     margin-top: 40px;
     cursor: pointer;
     text-transform: uppercase;
@@ -207,14 +237,43 @@ header {
     text-shadow: 0px 0px 3px var(--color-p);
 }
 
+.sliders-pointers {
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw; 
+    height: 20px;
+    margin-top: -50px;
+}
+
+.pointer {
+    border: 2px solid var(--color-p);
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.pointer:hover {
+    background-color: var(--color-p);
+}
+
+.banner .pointer.active {
+    background-color: var(--color-p);
+}
+
 .buttonBlack {
     background-color: #000;
     color: #FFF;
     font-weight: 600;
     text-align: center;
-    width: 200px;
-    padding: 15px 20px;
-    border-radius: 100px;
+    max-width: 200px;
+    padding: 15px 30px;
+    border-radius: 20px;
     margin-top: 40px;
     cursor: pointer;
     text-transform: uppercase;
@@ -226,30 +285,6 @@ header {
     background-color: var(--color-p);
     color: #000;    
     text-shadow: 0px 0px 3px #000;
-}
-
-.navImage {
-    display: flex;
-    margin-bottom: 30px;    
-}
-
-.nav {
-    border: 3px solid var(--color-p);
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    cursor: pointer;
-    transition: 250ms;
-}
-
-.nav:hover {
-    background-color: var(--color-p);
-}
-
-.navSelected {
-    background-color: var(--color-p);
 }
 
 .about {
@@ -646,10 +681,6 @@ header {
 
 .socialLogo:hover {
     background-color: var(--color-p);
-}
-
-.containerNav {
-    padding-top: 50px;
 }
 
 .customerSec {
