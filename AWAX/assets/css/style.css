@@ -128,6 +128,49 @@ header {
     list-style: none;    
 }
 
+
+.button {
+    background-color: var(--color-p);
+    color: #FFF;
+    font-weight: 600;
+    text-align: center;
+    max-width: 200px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 250ms;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 3px #000;
+    background-color: #000;
+    color: var(--color-p);
+    text-shadow: 0px 0px 3px var(--color-p);
+}
+
+.buttonBlack {
+    background-color: #000;
+    color: #FFF;
+    font-weight: 600;
+    text-align: center;
+    max-width: 200px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 250ms;
+}
+
+.buttonBlack:hover {
+    box-shadow: 0px 0px 3px #000;
+    background-color: var(--color-p);
+    color: #000;    
+    text-shadow: 0px 0px 3px #000;
+}
+
 .banner {
     background-image:  url("../images/bg.jpg");
     background-color: #333;
@@ -165,6 +208,35 @@ header {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 50px;
+}
+
+.sliders-pointers {
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw; 
+    height: 20px;
+    margin-top: -50px;
+}
+
+.pointer {
+    border: 2px solid var(--color-p);
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.pointer:hover {
+    background-color: var(--color-p);
+}
+
+.banner .pointer.active {
+    background-color: var(--color-p);
 }
 
 .banner h1 span {
@@ -241,15 +313,69 @@ CSS DE INTERFACES
 /* 
 CSS DE ÁREAS ESPECÍFICAS
  */
-
-
-
-
-
-
-.aboutSec {
-    background-color: var(--light-grey-color);
+.section-aboutus {
+    display: flex;
 }
+
+.section-aboutus--left {
+    flex: 1;
+}
+
+.section-aboutus--left p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.section-aboutus--right {
+    width: 520px;
+    text-align: center;
+}
+
+.section-aboutus--right img {
+    width: 480px;
+    box-shadow: 0px 5px 10px #333;
+}
+
+
+
+
+.section-services {
+    display: flex;
+}
+
+.section-service {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 20px;
+}
+
+.section-service:first-child {
+    border-left: 1px solid #333;
+}
+
+.section-service h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.section-service p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .container {
     display: flex;
@@ -289,77 +415,6 @@ CSS DE ÁREAS ESPECÍFICAS
     flex-wrap: wrap;
 }
 
-.button {
-    background-color: var(--color-p);
-    color: #FFF;
-    font-weight: 600;
-    text-align: center;
-    max-width: 200px;
-    padding: 15px 30px;
-    border-radius: 20px;
-    margin-top: 40px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: 250ms;
-}
-
-.button:hover {
-    box-shadow: 0px 0px 3px #000;
-    background-color: #000;
-    color: var(--color-p);
-    text-shadow: 0px 0px 3px var(--color-p);
-}
-
-.sliders-pointers {
-    display: flex;   
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100vw; 
-    height: 20px;
-    margin-top: -50px;
-}
-
-.pointer {
-    border: 2px solid var(--color-p);
-    width: 15px;
-    height: 15px;
-    border-radius: 8px;
-    margin-right: 5px;
-    margin-left: 5px;
-    cursor: pointer;
-    transition: 250ms;
-}
-
-.pointer:hover {
-    background-color: var(--color-p);
-}
-
-.banner .pointer.active {
-    background-color: var(--color-p);
-}
-
-.buttonBlack {
-    background-color: #000;
-    color: #FFF;
-    font-weight: 600;
-    text-align: center;
-    max-width: 200px;
-    padding: 15px 30px;
-    border-radius: 20px;
-    margin-top: 40px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: 250ms;
-}
-
-.buttonBlack:hover {
-    box-shadow: 0px 0px 3px #000;
-    background-color: var(--color-p);
-    color: #000;    
-    text-shadow: 0px 0px 3px #000;
-}
-
 .about {
     height: 500px;    
     box-shadow: 5px 0px 5px #000;
@@ -379,25 +434,6 @@ CSS DE ÁREAS ESPECÍFICAS
     color: grey;
 }
 
-.contentAbout {
-    display: flex;
-    justify-content: space-between;
-}
-
-.partOne {
-    display: flex;
-    flex-direction: column;
-    padding-right: 50px;
-    margin-bottom: 15px;
-}
-
-.informativeVideo {
-    width: 400px;
-    height: 250px;
-    background-color: #171717;
-    box-shadow: 2px 3px 5px #000;
-}
-
 .paddingSections {
     padding-top: 40px;
     padding-bottom: 20px
@@ -406,50 +442,6 @@ CSS DE ÁREAS ESPECÍFICAS
 .blackColorBg {
     background-color: #000;
     color: #FFF;
-}
-
-.servicesSec {
-    padding-bottom: 30px;
-}
-
-.services {
-    display: flex;
-    justify-content: space-around;
-}
-
-.servicesContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.serviceDescription p {
-    padding-top: 20px;
-    padding-bottom: 5px;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.serviceDescription label {
-    color: #b7b7b7;
-}
-
-.serviceBefore {
-    display: flex;
-}
-
-.serviceBefore::before {    
-    content: '';
-    border-left: 1px solid #b7b7b7;
-}
-
-.afterStyle::after {
-    content: '';
-    border-left: 1px solid #b7b7b7;
 }
 
 .projectSec {
@@ -907,7 +899,9 @@ CSS DE ÁREAS ESPECÍFICAS
     margin-left: 30px;
 }
 
-.features strong, span, p {
+.features strong,
+.features span, 
+.features p {
     max-width: 425px;
     padding-bottom: 15px;
 }
@@ -918,7 +912,8 @@ CSS DE ÁREAS ESPECÍFICAS
     font-weight: 700;
 }
 
-.features span, p {
+.features span,
+.features p {
     color: var(--grey-color);
 }
 
@@ -1322,16 +1317,6 @@ footer {
 
 @media (max-width: 672px) {
 
-    .contentAbout,
-    .partOne{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-right: 10px;
-        padding-left: 10px;
-        text-align: center;
-    }
-
     .shareContainer {
         flex-direction: column;
     }
@@ -1378,20 +1363,6 @@ footer {
 
     .title h1 {
         font-size: 3.5em;
-    }
-
-    .services {
-        flex-direction: column;
-    }
-
-    .serviceBefore::before,
-    .afterStyle::after {
-        border-left: 0px solid #000;
-    }
-
-    .servicesContainer {
-        margin-bottom: 50px;
-        max-width: 230px;
     }
 
     #identity {
