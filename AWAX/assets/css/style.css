@@ -370,6 +370,45 @@ CSS DE ÁREAS ESPECÍFICAS
 
 
 
+.section-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-projects--filters {
+    border: 1px solid #CCC;
+    background-color: #EEE;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.section-projects--filters ul,
+.section-projects--filters li {
+    list-style: none;
+}
+
+.section-projects--filters li {
+    /* Alinha os blocos em linha e mantem os tamanhos */
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 13px;    
+    color: #555;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+
+.section-projects--filters li:hover,
+.section-projects--filters li.active {
+    border-bottom: 3px solid var(--color-p);
+}
+
+.section-projects--filters li:nth-child(n+2) {
+    border-left: 1px solid #CCC;
+}
+
 
 
 
