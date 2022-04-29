@@ -174,6 +174,10 @@ header {
     /* 100vh = o tamanho total da tela do usuário em altura - os 100px da área do menu */
 }
 
+
+/* 
+BANNER SLIDE
+*/
 .banner .sliders {
     width: 1000vw;
     height: 100%;    
@@ -202,7 +206,7 @@ header {
     font-size: 50px;
 }
 
-.sliders-pointers {
+.banner .sliders-pointers {
     display: flex;   
     justify-content: center;
     align-items: center;
@@ -212,7 +216,7 @@ header {
     margin-top: -50px;
 }
 
-.pointer {
+.banner .pointer {
     border: 2px solid var(--color-p);
     width: 15px;
     height: 15px;
@@ -223,10 +227,7 @@ header {
     transition: 250ms;
 }
 
-.pointer:hover {
-    background-color: var(--color-p);
-}
-
+.banner .pointer:hover,
 .banner .pointer.active {
     background-color: var(--color-p);
 }
@@ -483,6 +484,89 @@ SECTION PROJECTS END
 */
 
 
+
+
+
+
+
+/* 
+SECTION TEAM
+*/
+.bg-team {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+
+.section-team-area {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* 
+CARD SLIDE
+*/
+.section-team {
+    overflow: hidden;
+    margin: auto;
+    max-width: 880px;/* Diminuir o max-width para limitar a quantidade de sliders que irão aparecer na tela. */
+}
+
+.section-team .sliders {
+    width: 1000vw;
+    height: 100%;    
+}
+
+.section-team .slide {
+    display: inline-block;
+    width: 280px; /* vw = Tamanho total da tela do usuário em largura */
+    height: 100%;
+    min-height: 300px;
+    margin-right: 20px;
+    background-color: #FFF;
+    
+}
+
+.section-team .slidearea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #FFF;
+}
+
+
+.section-team-area .sliders-pointers {
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin-top: 30px;
+}
+
+.section-team-area .pointer {
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition: 250ms;
+    border: 2px solid var(--color-p);
+    cursor: pointer;
+}
+
+.section-team-area .pointer:hover,
+.section-team-area .pointer.active {
+    background-color: var(--color-p);
+}
+
+/* 
+SECTION TEAM END
+*/
 
 
 
