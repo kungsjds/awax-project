@@ -129,18 +129,24 @@ header {
 }
 
 
-.button {
-    background-color: var(--color-p);
-    color: #FFF;
-    font-weight: 600;
+.button,
+.buttonBlack {
+    display: inline-block;
     text-align: center;
-    max-width: 200px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFF;   
+    background-color: var(--color-p);     
+    font-size: 12px;
+    font-weight: 600;  
     padding: 15px 30px;
     border-radius: 20px;
-    margin-top: 40px;
-    cursor: pointer;
-    text-transform: uppercase;
+    margin-top: 30px;    
     transition: 250ms;
+}
+
+.buttonBlack {
+    background-color: #000;
 }
 
 .button:hover {
@@ -148,20 +154,6 @@ header {
     background-color: #000;
     color: var(--color-p);
     text-shadow: 0px 0px 3px var(--color-p);
-}
-
-.buttonBlack {
-    background-color: #000;
-    color: #FFF;
-    font-weight: 600;
-    text-align: center;
-    max-width: 200px;
-    padding: 15px 30px;
-    border-radius: 20px;
-    margin-top: 40px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: 250ms;
 }
 
 .buttonBlack:hover {
@@ -310,9 +302,15 @@ CSS DE INTERFACES
 
 
 
+
 /* 
 CSS DE ÁREAS ESPECÍFICAS
  */
+
+
+/* 
+SECTION ABOUTUS
+*/
 .section-aboutus {
     display: flex;
 }
@@ -335,10 +333,16 @@ CSS DE ÁREAS ESPECÍFICAS
     width: 480px;
     box-shadow: 0px 5px 10px #333;
 }
+/* 
+SECTION ABOUTUS END
+*/
 
 
 
 
+/* 
+SECTION SERVICES
+*/
 .section-services {
     display: flex;
 }
@@ -365,11 +369,16 @@ CSS DE ÁREAS ESPECÍFICAS
     font-size: 13px;
     color: #999;
 }
+/* 
+SECTION SERVICES END
+*/
 
 
 
 
-
+/* 
+SECTION PROJECTS
+*/
 .section-projects {
     display: flex;
     flex-direction: column;
@@ -391,17 +400,22 @@ CSS DE ÁREAS ESPECÍFICAS
 
 .section-projects--filters li {
     /* Alinha os blocos em linha e mantem os tamanhos */
-    display: inline-block;
-    padding: 10px;
+    display: inline-block;    
     text-transform: uppercase;
-    font-size: 13px;    
+    font-size: 13px;   
     color: #555;
-    border-bottom: 3px solid transparent;
     cursor: pointer;
 }
 
-.section-projects--filters li:hover,
-.section-projects--filters li.active {
+.section-projects--filters li span {
+    display: inline-block;
+    margin: 0px 10px;
+    padding: 10px 0px;
+    border-bottom: 3px solid transparent;
+}
+
+.section-projects--filters li span:hover,
+.section-projects--filters li span.active {
     border-bottom: 3px solid var(--color-p);
 }
 
@@ -409,6 +423,64 @@ CSS DE ÁREAS ESPECÍFICAS
     border-left: 1px solid #CCC;
 }
 
+/*
+PHOTOS
+*/
+.section-projects--photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+}
+
+.section-projects--photo {
+    width: 280px;
+}
+
+.section-projects-photoarea {
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+
+.section-projects-photoarea img {
+    width: inherit;
+    height: inherit;
+    box-shadow: 0px 0px 5px #000;
+}
+
+.section-projects--photoinfo {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    width: inherit;
+    height: inherit;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.5);       
+}
+
+.section-projects--photoinfo h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section-projects-photoarea:hover .section-projects--photoinfo {
+    display: flex;   
+}
+
+.section-projects-photoarea:hover {
+    transform: scale(1.05,1.05);
+    box-shadow: 2px 2px 5px #000;
+}
+
+/* 
+SECTION PROJECTS END
+*/
 
 
 
@@ -481,84 +553,6 @@ CSS DE ÁREAS ESPECÍFICAS
 .blackColorBg {
     background-color: #000;
     color: #FFF;
-}
-
-.projectSec {
-    background-color: var(--light-grey-color);
-}
-
-.menuProject {
-    display: flex;  
-    /* justify-content: space-around; */
-    /* flex-wrap: wrap; */
-    border: 1px solid var(--grey-color);  
-    border-radius: 20px;
-    text-transform: uppercase;
-    box-shadow: 0px 0px 1px var(--grey-color);
-}
-
-.menuPartOne,
-.menuPartTwo {
-    display: flex;
-    border-radius: 20px;  
-}
-
-.menuProject div {
-    background-color: var(--light-grey-color);
-    /* width: 100px; */
-    /* height: 50px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border-bottom: 5px solid transparent; */
-    /* padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px; */
-}
-
-.beforeStyle::before {
-    content: "";
-    display: inline-block;
-    width: 1px;
-    height: 40px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: var(--grey-color);
-}
-
-.menuPartOne div:first-child {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding-left: 30px;
-}
-
-.menuPartTwo div:last-child {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding-right: 30px;
-}
-
-.menuProject label {
-    display: flex;
-    align-items: center;
-    height: 44px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-bottom: 5px solid transparent;
-    cursor: pointer;
-    transition: 250ms;
-}
-
-.menuProject label:hover {
-    border-bottom: 5px solid var(--color-p);
-}
-
-
-#selectedMenu {
-    border-bottom: 5px solid var(--color-p);
 }
 
 .projectImages {
@@ -1375,26 +1369,6 @@ footer {
         display: none;
     }
 
-    .menuProject {
-        flex-direction: column;        
-    }
-
-    .menuProject div {
-        justify-content: flex-start;
-    }
-
-    .optionMenu {
-        border-radius: 20px;  
-    }
-
-    .menuPartOne div:first-child,
-    .menuPartTwo div:first-child {
-        padding-left: 10px;
-    }
-
-    .menuPartTwo div:last-child {
-        padding-right: 10px;
-    }
 
 }
 
