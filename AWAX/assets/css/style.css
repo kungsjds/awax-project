@@ -1,6 +1,6 @@
 :root {
     --color-p: #B28756;
-    --grey-color: #bebebe;
+    --grey-color: #999;
     --light-grey-color: #F7F7F7;
     --dark-grey-color: #373737;
 
@@ -525,9 +525,9 @@ CARD SLIDE
     width: 280px; /* vw = Tamanho total da tela do usuário em largura */
     height: 100%;
     min-height: 300px;
-    margin-right: 20px;
+    margin-right: 15px;
     background-color: #FFF;
-    
+    border-radius: 5px;
 }
 
 .section-team .slidearea {
@@ -536,7 +536,8 @@ CARD SLIDE
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: #FFF;
+    color: #000;
+    padding: 30px;
 }
 
 
@@ -564,6 +565,54 @@ CARD SLIDE
     background-color: var(--color-p);
 }
 
+
+.section-team--avatar {
+    width: 150px;
+    height: auto;    
+    transition: 250ms;
+}
+
+.section-team--name {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 30px;
+    transition: 250ms;
+}
+
+.section-team--role {
+    font-size: 14px;
+    margin-top: 5px;
+    transition: 250ms;
+    color: var(--grey-color);
+}
+
+.section-team--social {
+    display: flex;
+    margin-top: 20px;
+}
+
+.section-team--social a {
+    display: inline-flex; /* Para colocar um tamanho na tag: a */
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 13px;
+    background-color: var(--grey-color);
+    margin-right: 10px;
+    transition: 250ms;
+}
+
+.section-team--social a:hover {
+    background-color: var(--color-p);
+}
+
+.section-team .slide:hover .section-team--avatar, 
+.section-team .slide:hover .section-team--name, 
+.section-team .slide:hover .section-team--role {
+    transform: scale(1.03,1.03);
+} 
 /* 
 SECTION TEAM END
 */
@@ -784,13 +833,6 @@ SECTION TEAM END
     cursor: pointer;
 }
 
-.teamSec {
-    background-image: url("../../media/foto6.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .titleGeral2 {
     margin-bottom: 40px;
     font-size: 1.7em;
@@ -804,65 +846,6 @@ SECTION TEAM END
     font-weight: 600;
     padding-top: 10px;
     color: var(--grey-color);
-}
-
-.teamCards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.cards {
-    display: flex;
-    flex-direction: column;
-    background-color: #FFF;
-    border-radius: 1%;
-    box-shadow: 0px 0px 5px #000;
-    padding: 30px;
-    margin-top: 15px;
-    margin-left: 15px;
-    margin-right: 15px;
-    transition: 250ms;
-}
-
-.cards:hover {
-    box-shadow: 1px 2px 7px #000;    
-    transform: scale(1.05,1.05);
-}
-
-.cards figure img {
-    padding: 20px;
-}
-
-.cards figcaption {
-    text-align: center;    
-}
-
-.cards figcaption p {
-    text-transform: uppercase;
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-.socialLinks {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 25px;
-}
-
-.socialLogo {
-    display: flex;
-    justify-content: center;
-    background-color: var(--grey-color);
-    width: 25px;
-    height: 25px;
-    border-radius: 12.5px;  
-    padding: 5px;  
-    transition: 250ms;
-}
-
-.socialLogo:hover {
-    background-color: var(--color-p);
 }
 
 .customerSec {
