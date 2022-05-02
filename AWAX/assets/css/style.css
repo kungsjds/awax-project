@@ -617,8 +617,78 @@ CARD SLIDE
 SECTION TEAM END
 */
 
+/* 
+SECTION CLIENTS
+*/
+.section-clients {
+    overflow: hidden;
+    margin: auto;
+    max-width: 880px;
+}
 
+.section-clients .sliders {
+    width: 2640vw;
+    height: 100%;
+}
 
+.section-clients .slide {
+    display: inline-block;
+    width: 880px;
+    height: 100%;
+}
+
+.section-clients .slidearea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.section-clients--name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.section-clients--role {
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.section-clients--depoiment {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--grey-color);
+}
+
+.section-clients .sliders-pointers {
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin-top: 30px;
+}
+
+.section-clients .pointer {
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition: 250ms;
+    border: 2px solid var(--color-p);
+    cursor: pointer;
+}
+
+.section-clients .pointer:hover,
+.section-clients .pointer.active {
+    background-color: var(--color-p);
+}
+/* 
+SECTION CLIENTS END
+*/
 
 
 .container {
@@ -846,47 +916,6 @@ SECTION TEAM END
     font-weight: 600;
     padding-top: 10px;
     color: var(--grey-color);
-}
-
-.customerSec {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--light-grey-color);    
-}
-
-.containerCustomerImage img {
-    padding: 20px;
-}
-
-.containerCustomerImage figcaption {
-    text-align: center;    
-}
-
-.containerCustomerImage figcaption p {
-    font-size: 1.5em;
-    font-weight: 700;
-}
-
-.containerCustomerImage figcaption label {
-    font-size: 1.1em;
-    font-weight: 600;
-}
-
-.customerDescription {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
-    text-align: center;
-}
-
-.customerOpnion {
-    color: var(--dark-grey-color);
-    width: 70%;
-    padding-top: 10px;
 }
 
 .companySec {
