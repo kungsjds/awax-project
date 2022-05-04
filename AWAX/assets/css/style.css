@@ -897,6 +897,129 @@ SECTION PREMIUM END
 
 
 
+/* 
+SECTION FACTS
+*/
+.section-facts {
+    display: flex;
+}
+
+.section-fact {
+    flex: 1; /* Todas as divs com essa classe, irão ocupar o mesmo espaço dentro do elemento herdado */
+    padding: 15px;
+    text-align: center;    
+}
+
+.section-fact h3 {
+    color: var(--color-p);
+    font-size: 45px;
+    margin-bottom: 7px;
+}
+
+.section-fact--line {
+    width: 20px;  
+    height: 3px;
+    background-color: var(--grey-color);
+    margin: auto;
+}
+
+.section-fact h4 {    
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 7px;
+}
+
+.section-fact p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--grey-color);
+}
+/* 
+SECTION FACTS END
+*/
+
+
+
+
+
+
+/* 
+SECTION SHARE
+*/
+.section-share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFF;
+    color: var(--grey-color);
+    border-bottom: 1px solid var(--grey-color);
+}
+
+.section-share--legend {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin-right: 40px;
+    font-weight: 600;
+}
+
+.section-share--legend img {
+    margin-right: 10px;
+}
+
+.section-share--item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+.section-share--item:hover {
+    filter: brightness(120%);
+}
+
+.section-share--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 5px;
+    background-color: var(--additional-grey-color);
+}
+
+.section-share--icon img {
+    /* height: 12px; */
+}
+
+.section-share--icon.twitter {
+    background-color: #34c5f0;
+}
+
+.section-share--icon.linkedin {
+    background-color: #127cb4;
+}
+
+.section-share--icon.facebook {
+    background-color: #336297;
+}
+
+.section-share--icon.googleplus {
+    background-color: #e74237;
+}
+
+.section-share--icon.pinterest {
+    background-color: #b71c29;
+}
+/* 
+SECTION SHARE END
+*/
+
+
 
 .container {
     display: flex;
@@ -958,11 +1081,6 @@ SECTION PREMIUM END
 .paddingSections {
     padding-top: 40px;
     padding-bottom: 20px
-}
-
-.blackColorBg {
-    background-color: #000;
-    color: #FFF;
 }
 
 .projectImages {
@@ -1135,130 +1253,6 @@ SECTION PREMIUM END
     margin-bottom: 10px;
     background-color: var(--grey-color);
 
-}
-
-.factsContainer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;    
-    margin-bottom: 25px;
-}
-
-.facts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    max-width: 180px;
-}
-
-.facts strong {
-    color: var(--color-p);
-    font-size: 3.3em;
-    font-weight: 700;
-}
-
-.facts p {
-    color: #FFF;
-    text-transform: uppercase;
-    font-size: 1.4em;
-    font-weight: 700;
-    text-align: center;
-}
-
-.facts span {
-    color: var(--grey-color);
-    font-size: 0.8em;
-}
-
-.facts p::before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 3px;
-    background-color: var(--grey-color);
-    margin: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.shareSec {
-    border-bottom: 1px solid var(--grey-color);
-}
-
-.shareContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;  
-    color: var(--grey-color);
-    font-weight: 700;  
-}
-
-.shareLogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    margin-right: 20px;    
-}
-
-.shareLogo label {
-    padding-left: 10px;
-    text-transform: uppercase;
-}
-
-.flexRow {
-    display: flex;
-}
-
-.containerLink {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    margin-left: 20px;    
-    margin-right: 20px;
-}
-
-.containerLink label {
-    padding-left: 5px;
-}
-
-.containerLink a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    transition: 250ms;
-}
-
-.containerLink a:hover {
-    filter: brightness(120%);
-}
-
-.twitterLogo {
-    background-color: #32c5f0;
-}
-
-.linkedinLogo {
-    background-color: #137bb2;
-}
-
-.facebookLogo {
-    background-color: #336296;
-}
-
-.googleplusLogo {
-    background-color: #e74135;
-}
-
-.pinterestLogo {
-    background-color: #b71d29;
 }
 
 .contactSec {
@@ -1518,25 +1512,6 @@ footer {
     .title p {
         font-size: 1em;
     }
-
-}
-
-@media (max-width: 672px) {
-
-    .shareContainer {
-        flex-direction: column;
-    }
-
-    .containerLink {
-        flex-direction: column;
-        margin-left: 10px;    
-        margin-right: 10px;
-    }    
-
-    .shareLogo {
-        margin-bottom: 20px;
-    }    
-
 
 }
 
