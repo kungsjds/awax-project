@@ -748,69 +748,64 @@
 
 
 
-
-            <section class="contactSec paddingSections">
-                <div class="container">
-                    <div class="titleGeral">
-                        <h2>Contact us</h2>
-                        <p>Our agency located in melbourne, australia</p>
-                    </div> 
-                    <form>
-                        <div id="identity">
-                            <input type="text" name="name" placeholder="NAME" />
-                            <input type="email" name="email" placeholder="EMAIL" />
-                        </div>
-                        <div id="subject">
+            <section class="default light">
+                <div class="section-title">Contact Us</div>
+                <div class="section-desc">Our Agency Located in Melbourne, Australia</div>
+                <div class="section-body">
+                    <div class="section-contact">
+                        <form method="POST">
+                            <div class="section-contact--split">
+                                <input type="text" name="name" placeholder="NAME" />
+                                <input type="text" name="email" placeholder="EMAIL" />
+                            </div>
                             <input type="text" name="subject" placeholder="SUBJECT" />
-                        </div>
-                        <div id="message">
-                            <input type="text" name="message" placeholder="MESSAGE"/>
-                        </div>
-                    </form>
-                    <a href="" class="button">
-                        Send message
-                    </a>
+                            <textarea name="message" placeholder="MESSAGE"></textarea>
+                            <input type="submit" value="Send Message" class="button" />
+                        </form>                       
+                    </div>
                 </div>
             </section>
-
             
-            <section class="localitySec">
-                <div class="container alignStart">
-                    <div class="addressSection">
-                        <div class="address">
-                            <div class="logoAddress">
+
+
+            <section class="section-map">
+                <div class="section-map--area">
+                    <div class="section-map--info">
+                        <div class="section-map--info-item">
+                            <div class="section-map--info-item-img">
                                 <img src="assets/images/carta.png" />
                             </div>
-                            <label>PO Box 16122 Collins Street West Victoria 8007 Australia</label>
+                            PO Box 16122 Collins Street West Victoria 8007 Australia
                         </div>
-                        <div class="address">
-                            <div class="logoAddress">
+                        <div class="section-map--info-item">
+                            <div class="section-map--info-item-img">
                                 <img src="assets/images/localizacao.png" />
                             </div>
-                            <label>121 King Street Melbourne Victoria 3000 Australia</label>
+                            121 King Street Melbourne Victoria 3000 Australia
                         </div>
-                        <div class="address">
-                            <div class="logoAddress">
+                        <div class="section-map--info-item">
+                            <div class="section-map--info-item-img">
                                 <img src="assets/images/telefone.png" />
                             </div>
-                            <label>+00 0 1234 5678</label>
+                            +00 0 1234 5678
                         </div>
-                        <div class="address">
-                            <div class="logoAddress">
+                        <div class="section-map--info-item">
+                            <div class="section-map--info-item-img">
                                 <img src="assets/images/arroba.png" />
                             </div>
-                            <label>bukindesign@gmail.com</label>
+                            bukindesign@gmail.com
                         </div>
-                        <div class="address">
-                            <div class="logoAddress">
+                        <div class="section-map--info-item">
+                            <div class="section-map--info-item-img">
                                 <img src="assets/images/web.png" />
                             </div>
-                            <label>www.envato.com.br</label>
+                            www.envato.com.br
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+        
         <footer class="paddingSections">
             <div class="container directionFooter">
                 <div class="footerArea1">
@@ -858,7 +853,9 @@
                 </div>
             </div>
         </footer>
+
         <div id="scrollTopButton" onclick="backToTop()">/\</div>
+
         <script type="text/javascript" src="assets/js/script.js"></script>
     </body>
 </html>
