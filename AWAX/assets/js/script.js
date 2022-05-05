@@ -28,14 +28,16 @@ function backToTop() {
 
 function menuToggle() {
     let menu = {
-        show: "839px",
+        show: "calc(100vh - 100px)",
         hidden: "0px"
     }
-    let element = document.getElementById('menuMobile');
+    let element = document.getElementById('menu-area');
 
-    if (element.style.height == "839px") {
+    if (element.style.height == menu.show) {
+        element.style.display = 'none';
         element.style.height = menu.hidden;
     } else {
-        element.style.height = menu.show;
+        element.style.display = 'flex';
+        element.style.height = menu.show;       
     };
 };

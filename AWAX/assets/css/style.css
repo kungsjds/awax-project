@@ -84,49 +84,8 @@ header {
     color: #CCC;
 }
 
-.menuMobileImages {
-    display: flex;
-}
-
-.contactImageHeader,
-#menuOpener {
+.menu-opener {
     display: none;
-    margin-right: 20px;
-    margin-left: 10px;
-}
-
-#menuMobile {
-    display: none;   
-    flex-direction: column;
-    position: absolute;
-    right: 0px;
-    top: 100px;
-    width: 250px;
-    height: 0px;
-    background-color: rgba(0, 0, 0, 0.8);    
-    overflow-x: auto;
-    overflow-y: hidden;  
-    transition: all 0.5s ease; 
-}
-
-#menuMobile a {
-    display: block;
-    text-decoration: none;
-    color: #FFF;
-    padding-top: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: 700;    
-}
-
-#menuMobile a:hover {
-    color: var(--color-p);
-}
-
-#menuMobile li {
-    list-style: none;    
 }
 
 
@@ -1397,20 +1356,60 @@ footer {
     right: 20px;
 }
 
-@media (max-width: 970px) {
+
+
+@media (min-width: 450px) and (max-width: 800px) {
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .menu-opener {
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+
+    #menu-area {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+        transition: 250ms;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        font-weight: 700;
+        height: 80px;
+        font-size: 27px;
+        margin-left: 50px;
+    }
+
+    .menu li.active a {
+        border: 0;
+        color: var(--color-p);
+    }
+
+}
+
+
+/* @media (max-width: 970px) {
 
     .menu {
         display: none;
     }
 
-    .contactImageHeader,
     #menuOpener {
         display: flex;        
     }   
-
-    #menuMobile {
-        display: flex;   
-    }
 
     .directionFooter {
         flex-direction: column;
@@ -1479,4 +1478,4 @@ footer {
 
 }
 
-
+ */
