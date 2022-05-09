@@ -41,3 +41,30 @@ function menuToggle() {
         element.style.height = menu.show;       
     };
 };
+
+function activeSlide(area, slide) {
+    let pointers = document.querySelectorAll(area + ' .pointer');
+
+    for (let i in pointers)  {
+        // if (pointers[i].classList.contains('active') && ) {
+
+        // };
+    };
+};
+
+function changeSlide(area, slide) {
+    let slideArea = document.querySelector(area + ' .sliders');
+
+    switch(slide) {
+        case 1: slideArea.style = 'margin-left: 0';
+                break;
+
+        case 2: slideArea.style = 'margin-left: -100vw';
+                break;
+        
+        case 3: slideArea.style = 'margin-left: -200vw';
+                break;
+    } 
+    
+    // activeSlide(area, slide);
+};

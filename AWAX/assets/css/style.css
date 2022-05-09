@@ -141,6 +141,7 @@ BANNER SLIDE
 .banner .sliders {
     width: 1000vw;
     height: 100%;    
+    transition: 250ms;
 }
 
 .banner .slide {
