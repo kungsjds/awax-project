@@ -46,25 +46,28 @@ function activeSlide(area, slide) {
     let pointers = document.querySelectorAll(area + ' .pointer');
 
     for (let i in pointers)  {
-        // if (pointers[i].classList.contains('active') && ) {
-
-        // };
+        console.log(i);
+        if (pointers[i].classList.contains('active') && i != slide) {
+            pointers[i].classList.remove('active');
+        } else if (i == slide) {
+            pointers[i].classList.add('active');
+        };
     };
 };
 
 function changeSlide(area, slide) {
-    let slideArea = document.querySelector(area + ' .sliders');
+    let sliders = document.querySelector(area + ' .sliders');
 
     switch(slide) {
-        case 1: slideArea.style = 'margin-left: 0';
+        case 0: sliders.style = 'margin-left: 0';
                 break;
 
-        case 2: slideArea.style = 'margin-left: -100vw';
+        case 1: sliders.style = 'margin-left: -100vw';
                 break;
         
-        case 3: slideArea.style = 'margin-left: -200vw';
+        case 2: sliders.style = 'margin-left: -200vw';
                 break;
     } 
     
-    // activeSlide(area, slide);
+    activeSlide(area, slide);
 };
