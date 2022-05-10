@@ -62,11 +62,24 @@ function changeSlide(area, slide) {
         case 0: sliders.style = 'margin-left: 0';
                 break;
 
-        case 1: sliders.style = 'margin-left: -100vw';
+        case 1: 
+                if (area == '.section-team-area') {
+                    // TO DO: Somar o tamanho dos cards dos slides. Os 280 + a margem de 15 = 295. 
+                    // Depois multiplcar esse valor pela quantidade de cards que aparecem na tela, 
+                    // , pode ser no máximo 3 e diminui para 2 e 1, coforme o tamanho da tela.
+                    sliders.style = 'margin-left: -590px';
+                } else {
+                    sliders.style = 'margin-left: -100vw';
+                };                
                 break;
         
-        case 2: sliders.style = 'margin-left: -200vw';
-                break;
+        case 2:
+                if (area == '.section-team-area') {
+                    sliders.style = 'margin-left: -1180px';
+                } else {
+                    sliders.style = 'margin-left: -200vw';
+                };                
+                break;                
     } 
     
     activeSlide(area, slide);

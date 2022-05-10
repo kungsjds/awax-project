@@ -479,8 +479,10 @@ CARD SLIDE
 }
 
 .section-team .sliders {
+    display: flex;
     width: 1000vw;
     height: 100%;    
+    transition: 350ms;
 }
 
 .section-team .slide {
@@ -592,8 +594,10 @@ SECTION TESTIMONIALS
 }
 
 .section-testimonials .sliders {
+    display: flex;
     width: 1000vw;
     height: 100%;
+    transition: 350ms;
 }
 
 .section-testimonials .slide {
