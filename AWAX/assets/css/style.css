@@ -769,6 +769,8 @@ SECTION PREMIUM
 .section-premium .sliders {
     width: 1000vw;
     height: 100%;
+    display: flex;
+    transition: 350ms;
 }
 
 .section-premium .slide {
@@ -1209,7 +1211,7 @@ SECTION MAP END
     display: none;
 }
 
-.showInfo {
+/* .showInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1219,7 +1221,7 @@ SECTION MAP END
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     text-transform: uppercase;    
-}
+} */
 
 .text1 {
     font-size: 1.3em;
@@ -1390,7 +1392,8 @@ footer {
         margin-left: 50px;
     }
 
-    .menu li.active a {
+    .menu li.active a,
+    .menu li a:hover {
         border: 0;
         color: var(--color-p);
     }
@@ -1505,7 +1508,8 @@ footer {
         margin-left: 30px;
     }
 
-    .menu li.active a {
+    .menu li.active a,
+    .menu li a:hover {
         border: 0;
         color: var(--color-p);
     }
@@ -1604,7 +1608,7 @@ footer {
 
     .section-price--item:last-child {
         margin-bottom: 0;
-    }
+    }   
 
     .section-premium .slidearea {
         flex-direction: column;
